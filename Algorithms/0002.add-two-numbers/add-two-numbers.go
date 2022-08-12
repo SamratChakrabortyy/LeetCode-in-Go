@@ -4,15 +4,16 @@ import (
 	"github.com/aQuaYi/LeetCode-in-Go/kit"
 )
 
-// ListNode defines for singly-linked list.
-//  type ListNode struct {
-//      Val int
-//      Next *ListNode
-//  }
-type ListNode = kit.ListNode
+// ListNode2 defines for singly-linked list.
+//
+//	type ListNode2 struct {
+//	    Val int
+//	    Next *ListNode2
+//	}
+type ListNode2 = kit.ListNode
 
-func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-	resPre := &ListNode{}
+func addTwoNumbersOld(l1 *ListNode2, l2 *ListNode2) *ListNode2 {
+	resPre := &ListNode2{}
 	cur := resPre
 	carry := 0
 
@@ -31,7 +32,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
 		carry = sum / 10
 
-		cur.Next = &ListNode{Val: sum % 10}
+		cur.Next = &ListNode2{Val: sum % 10}
 		cur = cur.Next
 	}
 
