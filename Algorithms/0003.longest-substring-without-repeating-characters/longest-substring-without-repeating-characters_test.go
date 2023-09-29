@@ -51,6 +51,6 @@ func Test_OK(t *testing.T) {
 
 	for _, q := range qs {
 		a, p := q.a, q.p
-		ast.Equal(a.one, lengthOfLongestSubstring(p.one), "输入:%v", p)
+		ast.Equal(a.one, lengthOfLongestSubstring2(p.one), "输入:%v", p)
 	}
 }
