@@ -48,13 +48,18 @@ func Test_Problem0088(t *testing.T) {
 		},
 
 		question{
-			para{[]int{1, 3, 5, 7}, 4, []int{2, 4}, 2},
-			ans{[]int{1, 2, 3, 4}},
+			para{[]int{1, 3, 5, 7, 0, 0}, 4, []int{2, 4}, 2},
+			ans{[]int{1, 2, 3, 4, 5, 7}},
 		},
 
 		question{
-			para{[]int{1, 3, 5, 7}, 4, []int{2, 2}, 2},
-			ans{[]int{1, 2, 2, 3}},
+			para{[]int{1, 3, 5, 7, 0, 0}, 4, []int{2, 2}, 2},
+			ans{[]int{1, 2, 2, 3, 5, 7}},
+		},
+
+		question{
+			para{[]int{0, 0}, 1, []int{-2}, 1},
+			ans{[]int{-2, 0}},
 		},
 
 		// 如需多个测试，可以复制上方元素。
@@ -64,7 +69,7 @@ func Test_Problem0088(t *testing.T) {
 		a, p := q.ans, q.para
 		fmt.Printf("~~%v~~\n", p)
 
-		merge(p.one, p.m, p.two, p.n)
+		merge2(p.one, p.m, p.two, p.n)
 		ast.Equal(a.one, p.one, "输入:%v", p)
 	}
 }
