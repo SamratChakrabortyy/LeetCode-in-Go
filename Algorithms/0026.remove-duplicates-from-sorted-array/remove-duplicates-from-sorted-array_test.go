@@ -31,14 +31,14 @@ func Test_removeDuplicates(t *testing.T) {
 
 	for _, tc := range tcs {
 		fmt.Printf("~~%v~~\n", tc)
-		ast.Equal(tc.ans, removeDuplicates(tc.nums), "输入:%v", tc)
+		ast.Equal(tc.ans, removeDuplicates2(tc.nums), "输入:%v", tc)
 	}
 }
 
 func Benchmark_removeDuplicates(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		for _, tc := range tcs {
-			removeDuplicates(tc.nums)
+			removeDuplicates2(tc.nums)
 		}
 	}
 }
