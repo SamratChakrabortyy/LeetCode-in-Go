@@ -52,6 +52,6 @@ func Test_Problem0027(t *testing.T) {
 		a, p := q.ans, q.para
 		fmt.Printf("~~%v~~\n", p)
 
-		ast.Equal(a.one, p.one[:removeElement(p.one, p.two)], "输入:%v", p)
+		ast.Equal(a.one, p.one[:removeElement2(p.one, p.two)], "输入:%v", p)
 	}
 }
